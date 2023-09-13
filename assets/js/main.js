@@ -17,8 +17,9 @@ let options = {
     "Pomegranate",
     "Watermelon",
   ],
-  animals: ["Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
+  animals: ["Bnana","Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
   countries: [
+    "iran",
     "India",
     "Hungary",
     "Kyrgyzstan",
