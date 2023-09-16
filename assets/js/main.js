@@ -17,7 +17,7 @@ let options = {
     "Pomegranate",
     "Watermelon",
   ],
-  animals: ["Bnana","Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
+  animals: ["dog","Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
   countries: [
     "iran",
     "India",
@@ -35,14 +35,14 @@ let count = 0;
 
 let chosenWord = "";
 
-//Display option buttons
+//Display items buttons
 const displayOptions = () => {
-  optionsContainer.innerHTML += `<h3>Please Select An Option</h3>`;
-  let buttonCon = document.createElement("div");
-  for (let value in options) {
-    buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+  optionsContainer.innerHTML += `<h3>Please Select An items</h3>`;
+  let buttonElement = document.createElement("div");
+  for (let item in options) {
+    buttonElement.innerHTML += `<button class="options" onclick="generateWord('${item}')">${item}</button>`;
   }
-  optionsContainer.appendChild(buttonCon);
+  optionsContainer.appendChild(buttonElement);
 };
 
 //Block all the Buttons
@@ -82,7 +82,7 @@ const generateWord = (optionValue) => {
   chosenWord = chosenWord.toUpperCase();
 
   //replace every letter with span containing dash
-  let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
+  let displayItem = chosenWord.replace(/./g, '<span class="dashes"> _ </span>');
 
   //Display each element as span
   userInputSection.innerHTML = displayItem;
