@@ -12,13 +12,17 @@ let options = {
   fruits: [
     "Apple",
     "Orang",
-    "Mandarin",
+    "banana",
     "Pineapple",
-    "Pomegranate",
-    "Watermelon",
-    "banana"
+    "cucumber"
   ],
-  animals: ["dog","Hedgehog", "Rhinoceros", "Squirrel", "Panther", "Walrus", "Zebra"],
+  animals: [
+    "dog",
+    "cat",
+    "snake",
+    "Monkey",
+    "Zebra"
+  ],
   countries: [
     "iran",
     "India",
@@ -26,7 +30,6 @@ let options = {
     "Italy",
     "Kameron",
     "Zimbabwe",
-    "Dominica",
   ],
 };
 
@@ -47,7 +50,7 @@ const displayOptions = () => {
 };
 
 //show new game box
-const blocker = () => {
+const showNewGame = () => {
   newGameContainer.classList.remove("hide");
 };
 
@@ -102,7 +105,7 @@ const initializer = () => {
             winCount += 1;
             if (winCount == charArray.length) {
               resultText.innerHTML = `<h2 class='win-msg'>You Win!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-              blocker();
+              showNewGame();
             }
           }
         });
@@ -111,7 +114,7 @@ const initializer = () => {
         drawMan(count);
         if (count == 6) {
           resultText.innerHTML = `<h2 class='lose-msg'>You Lose!!</h2><p>The word was <span>${chosenWord}</span></p>`;
-          blocker();
+          showNewGame();
         }
       }
       button.disabled = true;
